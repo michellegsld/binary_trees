@@ -125,21 +125,32 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 
 /* TASK 30 PROTOTYPE */
-/* TASK 31 PROTOTYPE */
-/* TASK 32 PROTOTYPE */
-/* TASK 33 PROTOTYPE */
-/* TASK 34 PROTOTYPE */
-/* TASK 35 PROTOTYPE */
-/* TASK 36 PROTOTYPE */
-/* TASK 37 PROTOTYPE */
-/* TASK 38 PROTOTYPE */
-/* TASK 39 PROTOTYPE */
-/* TASK 40 PROTOTYPE */
-/* TASK 41 PROTOTYPE */
-/* TASK 42 PROTOTYPE */
-/* TASK 43 PROTOTYPE */
-/* TASK 44 PROTOTYPE */
-/* TASK 45 PROTOTYPE */
-/* TASK 46 PROTOTYPE */
+int binary_tree_is_avl(const binary_tree_t *tree);
 
+/* TASK 31 PROTOTYPE */
+avl_t *avl_insert(avl_t **tree, int value);
+
+/* TASK 32 PROTOTYPE */
+avl_t *array_to_avl(int *array, size_t size);
+
+/* TASK 33 PROTOTYPE */
+avl_t *avl_remove(avl_t *root, int value);
+
+/* TASK 34 PROTOTYPE */
+avl_t *sorted_array_to_avl(int *array, size_t size);
+
+/* TASK 36 PROTOTYPE */
+int binary_tree_is_heap(const binary_tree_t *tree);
+
+/* TASK 37 PROTOTYPE */
+heap_t *heap_insert(heap_t **root, int value)
+
+/* TASK 38 PROTOTYPE */
+heap_t *array_to_heap(int *array, size_t size);
+
+/* TASK 39 PROTOTYPE */
+int heap_extract(heap_t **root);
+
+/* TASK 40 PROTOTYPE */
+int *heap_to_sorted_array(heap_t *heap, size_t *size);
 #endif
