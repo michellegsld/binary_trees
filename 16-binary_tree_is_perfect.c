@@ -7,18 +7,17 @@
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	const binary_tree_t *temp = tree;
-	int lefter, righter;
 
 	if (tree == NULL)
 		return (0);
 
-	if (temp->left == NULL && temp->right == NULL)
+	if ((temp->left == NULL && temp->right == NULL))
 		return (0);
 
 	if (temp->left == NULL || temp->right == NULL)
-		return (1);
+	{
+		return (0);
+	}
 
-	lefter = binary_tree_is_perfect(tree->left);
-	righter = binary_tree_is_perfect(tree->left);
-	return (lefter && righter);
+	return (1);
 }
