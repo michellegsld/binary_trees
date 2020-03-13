@@ -11,11 +11,11 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	if !(temp->left == NULL && temp->right == NULL)
+	if (temp->left == NULL && temp->right == NULL)
 		return (0);
 
 	if (temp->left == NULL || temp->right == NULL)
-		return (0);
+		return (1);
 	
-	return (1);
+	return (binary_tree_is_perfect(temp->right) && binary_tree_is_perfect(temp->left));
 }
