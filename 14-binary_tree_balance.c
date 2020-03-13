@@ -14,11 +14,15 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (temp->left == NULL && temp->right == NULL)
 	{
-		return (1);
+		return (0);
 	}
+	else if (temp->left == NULL || temp->right == NULL)
+		return (-1);
+	else
+		return (2);
 
 	lheight = binary_tree_balance(temp->left);
 	rheight = binary_tree_balance(temp->right);
 
-	return (lheight + rheight + 1);
+	return (lheight - rheight);
 }
